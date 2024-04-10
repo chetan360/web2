@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<books>
+    <book> 
+        <title>SmackDown</title>
+        <author>John Cena</author>
+        <year>1998</year>
+        <price>500.50</price>
+    </book>
+    <book> 
+        <title>Raw</title>
+        <author>Brock Lesener</author>
+        <year>2005</year>
+        <price>600.70</price>
+    </book>
+    <book> 
+        <title>NXT</title>
+        <author>Finn Balor</author>
+        <year>2018</year>
+        <price>400.20</price>
+    </book>
+</books>

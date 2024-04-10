@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Details</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <form>
+        List of Employees:
+        <select name="ename" onchange="sendEname(this.value)">
+            <option value="Ram">Ram</option>
+            <option value="Sham">Sham</option>
+            <option value="Ravan">Ravan</option>
+        </select>
+    </form>
+
+    <div id="res">Teacher details will be displayed here</div>
+
+    <script>
+        function sendEname(str) {
+            var xhr = new XMLHttpRequest();
+            if (xhr === null) {
+                alert("HTTP request failed.");
+                return;
+            }
+            var url = "S26Q1getEmp.php?q=" + str;
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    document.getElementById("res").innerHTML = xhr.responseText;
+                }
+            };
+            xhr.open("GET", url, true);
+            xhr.send(null);
+        }
+    </script>
+</body>
+</html>

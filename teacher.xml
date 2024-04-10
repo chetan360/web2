@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<teachers>
+    <teacher>
+        <tno>1</tno>
+        <tname>John Cena</tname>
+        <qualification>WWE</qualification>
+        <salary>6000000</salary>
+    </teacher>
+    <teacher>
+        <tno>2</tno>
+        <tname>Brock Lesner</tname>
+        <qualification>WWE</qualification>
+        <salary>5000000</salary>
+    </teacher>
+</teachers>

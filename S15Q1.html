@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Suggestions Demo</title>
+</head>
+<body>
+    <h1>Suggestions Demo</h1>
+    <input type="text" id="searchInput">
+    <div id="suggestionList"></div>
+
+    <script>
+        document.getElementById('searchInput').addEventListener('input', function() {
+            var query = this.value.trim();
+
+            if (query !== '') {
+                var xhr = new XMLHttpRequest();
+
+                var url = 'Q15Q1getSuggestions.php?q=' + query;
+
+                xhr.open('GET', url, true);
+                xhr.onload = function() {
+                    if (xhr.status === 200) {
+                        var suggestions = JSON.parse(xhr.responseText);
+                        displaySuggestions(suggestions);
+                    } else {
+                        console.error('Error fetching suggestions:', xhr.statusText);
+                    }
+                };
+
+                xhr.send();
+            } else {
+                document.getElementById('suggestionList').innerHTML = '';
+            }
+        });
+
+        function displaySuggestions(suggestions) {
+            var suggestionList = document.getElementById('suggestionList');
+            suggestionList.innerHTML = ''; 
+            
+            suggestions.forEach(function(suggestion) {
+                var div = document.createElement('div');
+                div.textContent = suggestion;
+                suggestionList.appendChild(div);
+            });
+        }
+    </script>
+</body>
+</html>

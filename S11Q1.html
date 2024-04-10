@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <input id="stud" type="text" name="student" onblur="changeStyle()" onclick="displayImg()"><br>
+        <div id="sname">Student name: </div>
+        <img id="img" src="#" alt="NIT Trichy"
+             onmouseover="imgSize1()" onmouseup="imgSize2()" onload="imgSize3()"/>
+        <script>
+            
+            function changeStyle() {
+                const input = document.getElementById('stud');    
+                const sname = document.getElementById('sname');
+                
+                sname.style.fontSize = '18px';
+                sname.style.color = 'red';
+                sname.textContent = 'Student name: ' + input.value;
+            }
+            
+            function displayImg() {
+                const input = document.getElementById('stud');    
+                const img = document.getElementById('img');
+                if(input.value.trim() === '') {
+                    img.src = "https://typeset.io/resources/content/images/size/w2000/2021/07/96.jpeg";
+                    
+                }
+            }
+            
+            function imgSize1() {
+                const img = document.getElementById('img');
+                img.style.width = "200px";
+                img.style.height = "200px";
+            }
+            function imgSize2() {
+                const img = document.getElementById('img');
+                img.style.width = "20px";
+                img.style.height = "20px";
+            }
+            function imgSize3() {
+                const img = document.getElementById('img');
+                img.style.width = "400px";
+                img.style.height = "400px";
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Fibonacci Series</h1>
+        <div id="f1"></div>
+        <button onclick="fibonacci()">Print</button>
+        
+        <script>
+            var div = document.getElementById('f1');
+            
+            function fibonacci() {
+                let n1 = 0;
+                let n2 = 1;
+                
+                div.innerHTML = n1 + "<br>" + n2 + "<br>";
+                for(let i=2; i<10; i++) {
+                    let n3 = n1 + n2;
+                    n1 = n2;
+                    n2 = n3;
+                    div.innerHTML += n3 + "<br>";
+                }
+            }
+        </script>
+    </body>
+</html>

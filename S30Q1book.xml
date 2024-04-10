@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<books>
+    <book>
+        <!--Yoga-->
+        <book_title>Patanjali-Yoga</book_title>
+        <book_author>Ramdev Baba</book_author>
+        <book_price>353.45</book_price>
+    </book>
+    <book>
+        <!--Story-->
+        <book_title>Fairy-Tell</book_title>
+        <book_author>Harlo Queen</book_author>
+        <book_price>456.45</book_price>
+    </book>
+    <book>
+        <!--Technical-->
+        <book_title>TOM</book_title>
+        <book_author>Unknown</book_author>
+        <book_price>467.45</book_price>
+    </book>
+</books>

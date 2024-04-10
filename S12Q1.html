@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contacts List</title>
+</head>
+<body>
+    <h1>Contacts List:</h1>
+    <div id="table"></div><br>
+    <button id="btn">Print</button>
+
+    <script>
+        document.getElementById('btn').addEventListener('click', function() {
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'contact.dat', true);
+
+            xhr.onload = function() {
+                if (xhr.status === 200) {
+                    let contacts = xhr.responseText.trim();
+
+                    let table = "<table border=1><tr><th>Name</th><th>Contact</th></tr>";
+                    let rows = contacts.split("\n");
+                    for (let i = 0; i < rows.length; i++) {
+                        let cols = rows[i].split(",");
+                        table += "<tr><td>" + cols[0] + "</td><td> " + cols[1] + "</td></tr>";
+                    }
+
+                    table += "</table>";
+
+                    document.getElementById('table').innerHTML = table;
+                } else {
+                    alert("Error loading file contact.dat");
+                }
+            };
+
+            xhr.send();
+        });
+    </script>
+</body>
+</html>

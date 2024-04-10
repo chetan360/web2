@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<book isbn="132-3213-324"> //random isbn
+    <title>SmakDown</title>
+    <author>John Cena</author>
+    <publisher>WWE</publisher>
+    <price>500.50</price>
+</book>

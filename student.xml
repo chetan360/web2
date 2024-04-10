@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<students>
+    <student>
+        <sno>1</sno>
+        <sname>John</sname>
+        <address>xyz</address>
+    </student>
+    <student>
+        <sno>2</sno>
+        <sname>Brock</sname>
+        <address>stu</address>
+    </student>
+    <student>
+        <sno>1</sno>
+        <sname>Roman</sname>
+        <address>def</address>
+    </student>
+    <student>
+        <sno>1</sno>
+        <sname>Dean</sname>
+        <address>pqr</address>
+    </student>
+    <student>
+        <sno>1</sno>
+        <sname>Sam</sname>
+        <address>abc</address>
+    </student>
+</students>

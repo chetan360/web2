@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Details</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <form>
+        List of Book:
+        <select name="tname" onchange="sendBname(this.value)">
+            <option value="SmackDown">SmackDown</option>
+            <option value="Raw">Raw</option>
+            <option value="NXT">NXT</option>
+        </select>
+    </form>
+
+    <div id="res">Teacher details will be displayed here</div>
+
+    <script>
+        function sendBname(str) {
+            var xhr = new XMLHttpRequest();
+            if (xhr === null) {
+                alert("HTTP request failed.");
+                return;
+            }
+            var url = "S16Q1getBook.php?q=" + str;
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    document.getElementById("res").innerHTML = xhr.responseText;
+                }
+            };
+            xhr.open("GET", url, true);
+            xhr.send(null);
+        }
+    </script>
+</body>
+</html>
